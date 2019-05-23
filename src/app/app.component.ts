@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-favoritos';
+  adicionarArtigo(descricao: HTMLInputElement, url: HTMLInputElement): boolean {
+    console.log(`Adicionando artigo descrição: ${descricao.value} e URL: ${url.value}`);
+    return false;
+  }
 }
