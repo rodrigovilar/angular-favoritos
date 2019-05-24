@@ -9,8 +9,12 @@
     <label for="url">URL:</label>
     <input name="url" id="url" #novaUrl>
   </div>
-  <button (click)="adicionarArtigo(novaDescricao, novaUrl)" 
+  <button (click)="adicionarArtigo(novaDescricao, novaUrl)"
     class="ui positive right floated button">
-    Submit link
+    Adicionar Artigo
   </button>
 </form>
+
+<div class="ui grid posts">
+  <app-artigo></app-artigo>
+</div>
