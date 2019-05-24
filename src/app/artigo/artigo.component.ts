@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { Artigo } from './artigo.model';
 
 @Component({
   selector: 'app-artigo',
@@ -8,32 +9,17 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 export class ArtigoComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'row';
+  artigo: Artigo;
   
-  notas: number[];
-  media: number;
-  descricao: string;
-  url: string;
-
   constructor() {
-    this.descricao = 'Google';
-    this.url = 'http://google.com';
-    this.notas = [5, 4, 3];
-    this.media = this.calcularMedia(this.notas);
+    this.artigo = new Artigo('Google', 'http://google.com', [5, 4, 3]);
   }
 
   nota(n: number) {
-    this.notas.push(n);
-    this.media = this.calcularMedia(this.notas);
+    this.artigo.notas.push(n);
     return false;
   }
+  
   ngOnInit() { }
-
-  calcularMedia(arr: number[]): number {
-    let soma = 0;
-    for (let i = 0; i < arr.length; i++) {
-      soma += arr[i];
-    }
-    return Math.round(100 * (soma / arr.length ) ) / 100;
-  }
 
 }

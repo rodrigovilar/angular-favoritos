@@ -1,11 +1,11 @@
 <div class="four wide column center aligned stars">
   <div class="ui statistic">
-    <div class="value"> {{ media }} </div>
+    <div class="value"> {{ artigo.media() }} </div>
     <div class="label"> Média </div>
   </div>
 </div>
 <div class="twelve wide column">
-  <a class="ui large header" href="{{ url }}"> {{ descricao }} </a>
+  <a class="ui large header" href="{{ artigo.url }}"> {{ artigo.descricao }} </a>
   <ul class="ui big horizontal list starers">
     <li class="item"> <a href (click)="nota(1)"> <i class="star icon"></i>
       1 </a> </li>
