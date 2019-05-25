@@ -16,5 +16,8 @@
 </form>
 
 <div class="ui grid posts">
-  <app-artigo></app-artigo>
+  <app-artigo 
+    *ngFor="let artigo of artigos" 
+    [artigo]="artigo">
+  </app-artigo>
 </div>

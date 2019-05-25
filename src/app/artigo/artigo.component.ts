@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { Artigo } from './artigo.model';
 
 @Component({
@@ -9,11 +9,9 @@ import { Artigo } from './artigo.model';
 export class ArtigoComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'row';
-  artigo: Artigo;
+  @Input() artigo: Artigo;
   
-  constructor() {
-    this.artigo = new Artigo('Google', 'http://google.com', [5, 4, 3]);
-  }
+  constructor() { }
 
   nota(n: number) {
     this.artigo.notas.push(n);
