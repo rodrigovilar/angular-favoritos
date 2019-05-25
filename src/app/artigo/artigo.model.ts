@@ -18,7 +18,7 @@ export class Artigo {
         for (let i = 0; i < arr.length; i++) {
           soma += arr[i];
         }
-        return Math.round(100 * (soma / arr.length ) ) / 100;
+        return (soma == 0) ? 0 : Math.round(100 * (soma / arr.length ) ) / 100;
       }
     
 }
